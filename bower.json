@@ -1,0 +1,32 @@
+{
+  "name": "angular-toArrayFilter",
+  "main": "toArrayFilter.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/petebacondarwin/angular-toArrayFilter",
+  "authors": [
+    "Peter Bacon Darwin <pete@bacondarwin.com>"
+  ],
+  "description": "An angular filter to convert objects to arrays for easy filtering and sorting",
+  "keywords": [
+    "angular",
+    "filter",
+    "toArray",
+    "object",
+    "sort",
+    "orderBy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.2.0"
+  }
+}
