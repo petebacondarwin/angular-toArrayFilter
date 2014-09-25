@@ -1,7 +1,7 @@
 {
-  "name": "angular-toArrayFilter",
+  "name": "bill-angular-toArrayFilter",
   "main": "toArrayFilter.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/petebacondarwin/angular-toArrayFilter",
   "authors": [
     "Peter Bacon Darwin <pete@bacondarwin.com>"
