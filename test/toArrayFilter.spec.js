@@ -59,6 +59,10 @@ describe("toArrayFilter", function() {
     ]);
   }));
 
+  it("should handle undefined", inject(function(toArrayFilter) {
+    var obj = undefined;
+    expect(toArrayFilter(obj)).toBeUndefined();
+  }));
 
   it("should not work with non-objects", inject(function(toArrayFilter) {
     var obj = 'some string';
