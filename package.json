@@ -1,6 +1,6 @@
 {
   "name": "angular-toArrayFilter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An angular filter to convert objects to arrays for easy filtering and sorting",
   "main": "toArrayFilter.js",
   "directories": {
