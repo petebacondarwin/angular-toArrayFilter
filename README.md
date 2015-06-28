@@ -58,6 +58,7 @@ The filter iterates over the object's keys and creates an array containing the v
 property. By default, the filter also attaches a new property `$key` to the value containing
 the original key that was used in the object we are iterating over to reference the property.
 
+
 ## Not adding the `$key` property
 
 If you don't want the `$key` property to be attached to each of the property values, you simply
@@ -69,6 +70,14 @@ put an additional parameter on the `toArray` filter:
 </div>
 ```
 
+## Using `$key` with non-objects
+
+Non-objects such as strings and numbers cannot have a new `$key` property attached to them.
+If the object properties you are iterating over are not objects then you must either disable
+the `$key` property or the filter will replace the non-object with a new object of the form:
+`{ $key: key, $value: value }`.
+
+
 ## Caveats
 
 There are always issues when trying to iterate over properties in JavaScript and the `toArray`
@@ -76,10 +85,9 @@ filter has its own set of things to be aware of when using it:
 
 * It only works with plain Objects - don't try to filter arrays and strings with it.
 * If you don't disable it, the filter will modify each property value with a new `$key` property.
-* If the object you are iterating over contains values that are not objects then you must disable
-the `$key` property or it will error - non-objects cannot have properties attached to them.
 * This filter is not compatible with IE8. (It uses `Object.keys` and `Object.defineProperty` which
-don't work well or at all in Internet Explorer 8 (IE8).
+  don't work well or at all in Internet Explorer 8 (IE8).
+
 
 ## Example
 

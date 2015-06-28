@@ -46,6 +46,20 @@ describe("toArrayFilter", function() {
   }));
 
 
+  it("should create new objects ({$key:...,$value:...}) from non-object properties if `addKey` is not false", inject(function(toArrayFilter) {
+    var obj = {
+      a: 'A',
+      b: 'B',
+      c: 'C'
+    };
+    expect(toArrayFilter(obj)).toEqual([
+      { $key: 'a', $value: 'A' },
+      { $key: 'b', $value: 'B' },
+      { $key: 'c', $value: 'C' }
+    ]);
+  }));
+
+
   it("should work with an array", inject(function(toArrayFilter) {
     var obj = [
       { name: 'A' },
@@ -62,17 +76,8 @@ describe("toArrayFilter", function() {
   it("should handle invalid inputs", inject(function(toArrayFilter) {
     expect(toArrayFilter(undefined)).toBeUndefined();
     expect(toArrayFilter(null)).toBe(null);
+    expect(toArrayFilter('some string')).toBe('some string');
+    expect(toArrayFilter(12345)).toBe(12345);
   }));
 
-  it("should not work with non-objects", inject(function(toArrayFilter) {
-    var obj = 'some string';
-    expect(function() {
-      toArrayFilter(obj);
-    }).toThrow();
-
-    obj = 12345;
-    expect(function() {
-      toArrayFilter(obj);
-    }).toThrow();
-  }));
 });
