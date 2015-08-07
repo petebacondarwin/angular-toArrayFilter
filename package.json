@@ -6,12 +6,12 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "karma": "^0.12.19",
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "karma start test/karma.conf.js"
   },
