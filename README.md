@@ -15,6 +15,12 @@ The easiest way to install is using [bower][bower]:
 bower install --save angular-toArrayFilter
 ```
 
+You can also install via [npm][npm]
+
+```
+npm install --save angular-toarrayfilter
+```
+
 Alternatively you can download from the GitHub project:
 [https://github.com/petebacondarwin/angular-toArrayFilter](https://github.com/petebacondarwin/angular-toArrayFilter)
 
