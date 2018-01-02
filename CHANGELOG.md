@@ -2,6 +2,10 @@
 
 ## v1.0.2
 
+- Support commonjs
+
+## v1.0.2
+
 - Move dependencies into devDependencies
 
 ## v1.0.1
